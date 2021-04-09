@@ -1,0 +1,29 @@
+#masthead {
+  .logo-wrapper {
+    width: 100%;
+    max-width: 270px;
+    height: 100%;
+    max-height: 75px;
+    display: block;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    ul {
+      li {
+        margin-right: 25px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        a {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
