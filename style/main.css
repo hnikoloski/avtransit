@@ -131,6 +131,15 @@ a:focus {
   }
 }
 /* ====== / MIXINS ====== */
+#masthead {
+  transition: 0.6s;
+  padding: 10px 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1024;
+}
 #masthead .logo-wrapper {
   width: 100%;
   max-width: 270px;
@@ -142,10 +151,15 @@ a:focus {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: left;
 }
 #masthead .nav-wrapper {
   display: flex;
   align-items: center;
+}
+#masthead .nav-wrapper ul {
+  width: fit-content;
+  margin-left: auto;
 }
 #masthead .nav-wrapper ul li {
   margin-right: 25px;
@@ -155,6 +169,85 @@ a:focus {
 }
 #masthead .nav-wrapper ul li a {
   text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+}
+#masthead .nav-wrapper ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: transparent;
+  transition: all 0.6s;
+  opacity: 0;
+}
+#masthead .nav-wrapper ul li a:hover::after {
+  opacity: 1;
+  width: 100%;
+  background: #fff;
+}
+#masthead.sticky {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.36);
+  transition: 0.6s;
+}
+
+.hero {
+  min-height: 90vh;
+  position: relative;
+}
+.hero .content {
+  position: absolute;
+  max-width: 50%;
+  left: 10%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  z-index: 10;
+  color: #fff;
+}
+.hero .content h2 {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 30px;
+  max-width: 30ch;
+}
+.hero .content p {
+  font-size: 1.5rem;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.6;
+  z-index: 9;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .hero .content {
+    max-width: 100%;
+    padding: 15px;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0%, 0);
+    -moz-transform: translate(0%, 0);
+    -webkit-transform: translate(0%, 0);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -151,7 +151,9 @@ function avtransit_scripts()
 	wp_style_add_data('avtransit-style', 'rtl', 'replace');
 
 	wp_enqueue_script('avtransit-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
-	wp_enqueue_script('avtransit-botstrap-js', get_template_directory_uri() . '/libs/bootstrap/bootstrap.bundle.min.js', array(), true);
+	wp_enqueue_script('avtransit-jquery', get_template_directory_uri() . '/libs/jquery/jquery.min.js', array(), true);
+	wp_enqueue_script('avtransit-botstrap', get_template_directory_uri() . '/libs/bootstrap/bootstrap.bundle.min.js', array(), true);
+	wp_enqueue_script('avtransit-main', get_template_directory_uri() . '/js/main.js', array(), true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
