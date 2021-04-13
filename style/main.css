@@ -195,6 +195,94 @@ a:focus {
   transition: 0.6s;
 }
 
+@media (max-width: 768px) {
+  .main-navigation {
+    position: relative;
+  }
+  .main-navigation .menu-mainmenu-container {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #8f1315;
+    padding: 15px;
+    margin-top: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 9px;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+  }
+  .main-navigation .menu-mainmenu-container ul {
+    display: list-item;
+    text-align: right;
+  }
+  .main-navigation .menu-mainmenu-container ul li {
+    margin-right: 0 !important;
+    margin-bottom: 15px;
+  }
+  .main-navigation .menu-mainmenu-container ul li:last-of-type {
+    margin-bottom: 0;
+  }
+  .main-navigation #burger-icon {
+    width: 25px;
+    height: 22px;
+    position: relative;
+    margin: 0 0 0 auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .main-navigation #burger-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #8f1315;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  .main-navigation #burger-icon span:nth-child(1) {
+    top: 0px;
+  }
+  .main-navigation #burger-icon span:nth-child(2) {
+    top: 9px;
+  }
+  .main-navigation #burger-icon span:nth-child(3) {
+    top: 18px;
+  }
+  .main-navigation #burger-icon.open span:nth-child(1) {
+    top: 9px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  .main-navigation #burger-icon.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  .main-navigation #burger-icon.open span:nth-child(3) {
+    top: 9px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+}
 .hero {
   min-height: 90vh;
   position: relative;

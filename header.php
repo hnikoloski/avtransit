@@ -38,7 +38,13 @@ $logoUrl = wp_get_attachment_image_src($custom_logo_id, 'full');
 				</div>
 				<div class="col-6 nav-wrapper">
 					<nav id="site-navigation" class="main-navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'avtransit'); ?></button>
+						<div class="mobile-trigger">
+							<a href="#" id="burger-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</a>
+						</div>
 						<?php
 						wp_nav_menu(
 							array(
