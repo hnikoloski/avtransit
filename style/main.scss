@@ -1,6 +1,9 @@
 @import "./helpers/resets.scss";
+@import "./helpers/typography.scss";
 @import "./helpers/variables.scss";
 @import "./helpers/helpers.scss";
-@import "./helpers/typography.scss";
 @import "./layout/header";
 @import "./components/hero";
+body{
+    background: #0A0A0A;
+}

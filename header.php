@@ -31,13 +31,12 @@ $logoUrl = wp_get_attachment_image_src($custom_logo_id, 'full');
 	<div id="page" class="site">
 		<header id="masthead" class="site-header container-fluid">
 			<div class="row">
-				<div class="col-6">
+
+				<div class="col-12 nav-wrapper">
 					<a href="/" class="logo-wrapper">
 						<img src="<?php echo $logoUrl[0]; ?>" alt="Website Site Logo" class="img-fluid">
 					</a>
-				</div>
-				<div class="col-6 nav-wrapper">
-					<nav id="site-navigation" class="main-navigation">
+					<nav id="site-navigation" class="main-navigation mx-auto">
 						<div class="mobile-trigger">
 							<a href="#" id="burger-icon">
 								<span></span>

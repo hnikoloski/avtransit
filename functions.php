@@ -146,6 +146,7 @@ add_action('after_setup_theme', 'avtransit_content_width', 0);
 function avtransit_scripts()
 {
 	wp_enqueue_style('avtransit-bootstrap', get_template_directory_uri() . '/libs/bootstrap/bootstrap.min.css', array(), true);
+	wp_enqueue_style('avtransit-font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css', array(), _S_VERSION);
 	wp_enqueue_style('avtransit-def-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_enqueue_style('avtransit-main-style', get_template_directory_uri() . '/style/main.css', array(), true);
 	wp_style_add_data('avtransit-style', 'rtl', 'replace');
@@ -180,7 +181,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+// Add Options ACF Page
+if (function_exists('acf_add_options_page')) {
 
+	acf_add_options_page();
+}
 /**
  * Load Jetpack compatibility file.
  */

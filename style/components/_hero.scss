@@ -4,16 +4,17 @@
   .content {
     position: absolute;
     max-width: 50%;
-    left: 10%;
+    left: 15%;
     @include ver-center();
     z-index: 10;
 
     color: #fff;
     h2 {
-      font-size: 2.5rem;
-      line-height: 1;
-      margin-bottom: 30px;
-      max-width: 30ch;
+      font-weight: $bold;
+      font-size: 70px;
+      line-height: 1.1;
+      max-width: 10ch;
+      text-align: center;
     }
     p {
       font-size: 1.5rem;
@@ -29,6 +30,101 @@
     background: #000;
     opacity: 0.6;
     z-index: 9;
+  }
+  .socials{
+    position: absolute;
+    bottom: 85px;
+    left: 7.5%;
+    z-index: 99;
+    li{
+      margin-bottom: 19px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      a{
+        color: #fff;
+        font-size: 24px;
+        border: 3px solid #fff;
+        @include borderRadius(50%);
+        width: 40px;
+        height: 40px;
+        display: block;
+        text-align: center;
+        line-height: 37px;
+        &:hover{
+          color: $accent;
+          border-color: $accent;
+        }
+      }
+
+    }
+  }
+}
+.hero-services{
+  margin-top: -110px;
+  position: relative;
+  z-index: 9;
+  .single-service{
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+    @include borderRadius(34px);
+    overflow: hidden;
+    color: #fff;
+    transition: 0.6s;
+    &:hover{
+      transform: scale(1.02);
+    }
+    .img-wrapper{
+      width: 100%;
+      height: 285px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .content{
+      background: $accent;
+      padding: 70px 40px;
+      h3{
+        font-size: 30px;
+        font-weight: $bold;
+        margin-bottom: 25px;
+      }
+      p{
+        font-size: 20px;
+        font-weight: $medium;
+      }
+    }
+  }
+  .section-description{
+    p{
+      font-size: 30px;
+      font-weight: $medium;
+      color: #fff;
+      margin-top: 100px;
+      margin-bottom: 60px;
+    }
+    a{
+      background: $accent;
+      color: #fff;
+      font-size: 25px;
+      font-weight: $semiBold;
+      width: 320px;
+      height: 55px;
+      line-height: 55px;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      @include borderRadius(35px);
+      border: 1px solid $accent;
+      transition: 0.6s;
+      &:hover{
+        background: transparent;
+      }
+    }
   }
 }
 @media (max-width: 768px) {
