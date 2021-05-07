@@ -4,6 +4,39 @@
 @import "./helpers/helpers.scss";
 @import "./layout/header";
 @import "./components/hero";
-body{
-    background: #0A0A0A;
+@import "./components/featuredServices";
+@import "./components/why-section";
+@import "./components/cta";
+body {
+  background: #0a0a0a;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+a {
+  &.av-btn {
+    display: block;
+    color: #fff;
+    background: $accent;
+    height: 56px;
+    width: 320px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include borderRadius(35px);
+    border: 2px solid $accent;
+    position: relative;
+    span {
+      position: absolute;
+      @include abs-center();
+      width: 100%;
+    }
+    &:hover {
+      background: transparent;
+    }
+  }
 }
