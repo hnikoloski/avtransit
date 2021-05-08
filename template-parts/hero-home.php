@@ -33,7 +33,7 @@
                 $image_data = wp_get_attachment_image_src($image_id, 'full');
                 $image = $image_data[0];
         ?>
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-4">
                     <div class="single-service">
                         <div class="img-wrapper">
                             <?php
@@ -54,7 +54,7 @@
             <p>As a Trucking Company we provide more services. <br>
                 If you wish to learn more about it click on the button below!
             </p>
-            <a href="#">See More</a>
+            <a href="#" class="av-btn">See More</a>
         </div>
 
     </div>

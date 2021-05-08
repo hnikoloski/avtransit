@@ -1,0 +1,95 @@
+#newsletter {
+  background: #1a1a1a;
+  color: #fff;
+  padding-top: 130px;
+  padding-bottom: 120px;
+  h4 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 45px;
+  }
+  form {
+    #newsletter-form-wrap {
+      display: flex;
+      text-align: center;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      input {
+        height: 56px;
+        @include borderRadius(0);
+        border: none;
+        &[type="email"] {
+          width: 445px;
+          padding: 0 20px;
+          color: #848484;
+          font-size: 20px;
+          font-family: "Montserrat", sans-serif;
+          border-top-left-radius: 16px;
+          -webkit-border-top-left-radius: 16px;
+          -moz-border-top-left-radius: 16px;
+
+          border-bottom-left-radius: 16px;
+          -webkit-border-bottom-left-radius: 16px;
+          -moz-border-bottom-left-radius: 16px;
+        }
+        &[type="submit"] {
+          border-top-right-radius: 16px;
+          -webkit-border-top-right-radius: 16px;
+          -moz-border-top-right-radius: 16px;
+
+          border-bottom-right-radius: 16px;
+          -webkit-border-bottom-right-radius: 16px;
+          -moz-border-bottom-right-radius: 16px;
+          background: $accent;
+          color: #fff;
+          font-size: 25px;
+          font-weight: 700;
+          text-transform: uppercase;
+          width: 220px;
+          padding-top: 0;
+          padding-bottom: 0;
+          letter-spacing: 0.1em;
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #newsletter {
+    form {
+      #newsletter-form-wrap {
+        display: block;
+        input {
+          &[type="email"],
+          &[type="submit"] {
+            width: 100%;
+            @include borderRadius(16px);
+          }
+          &[type="submit"] {
+            margin-top: 25px;
+            width: fit-content;
+            padding: 0 35px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  #newsletter {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}

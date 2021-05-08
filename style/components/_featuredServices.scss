@@ -48,3 +48,36 @@
     }
   }
 }
+
+@media (max-width: 1440px) {
+  #featuredServices {
+    .single-service-card {
+      h3 {
+        font-size: 80px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #featuredServices {
+    .single-service-card {
+      padding: 120px 0;
+      height: auto;
+      h3 {
+        line-height: 1;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  #featuredServices {
+    .single-service-card {
+      &.left-box {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

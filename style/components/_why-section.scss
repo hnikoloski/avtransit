@@ -61,3 +61,42 @@
     }
   }
 }
+@media (max-width: 768px) {
+  #why-section {
+    .section-title {
+      margin-top: 25px;
+      font-size: 2rem;
+    }
+  }
+}
+@media (max-width: 600px) {
+  #why-section {
+    .cta-box {
+      max-width: 100%;
+      &::before {
+        opacity: 0.5;
+      }
+      &:first-of-type {
+        margin-bottom: 50px;
+      }
+
+      &:nth-of-type(2) {
+        text-align: right !important;
+        &::before {
+          left: 10px;
+          right: auto;
+        }
+      }
+      p {
+        font-size: 18px;
+        br {
+          display: none;
+        }
+      }
+      a.av-btn {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

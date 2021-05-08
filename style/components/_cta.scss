@@ -5,6 +5,9 @@
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
   .cta-content {
     margin-left: 25%;
     h3 {
@@ -17,6 +20,22 @@
       &:hover {
         background: $accent;
         transform: scale(1.05);
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  #cta-section {
+    .cta-content {
+      margin-left: 0;
+      width: 100%;
+      text-align: center;
+      h3 {
+        font-size: 3rem;
+      }
+      a.av-btn {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
