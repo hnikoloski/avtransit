@@ -12,7 +12,11 @@
 $custom_logo_id = get_theme_mod('custom_logo');
 $logoUrl = wp_get_attachment_image_src($custom_logo_id, 'full');
 ?>
-
+<div id="to-top-btn">
+    <a href="#top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+</div>
 <footer id="colophon" class="site-footer main-footer">
     <div class="container">
         <div class="row h-100">

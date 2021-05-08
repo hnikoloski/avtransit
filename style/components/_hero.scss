@@ -58,6 +58,18 @@
       }
     }
   }
+  &.single-hero {
+    min-height: 45vh;
+    .content {
+      width: 100%;
+      left: 0;
+      @include ver-center();
+      max-width: 100%;
+      h2 {
+        max-width: 100%;
+      }
+    }
+  }
 }
 .hero-services {
   margin-top: -110px;
@@ -158,6 +170,20 @@
   }
 }
 @media (max-width: 768px) {
+  .hero {
+    &.single-hero {
+      .content {
+        max-width: 100%;
+        padding: 15px;
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: translate(0%, 0);
+        -moz-transform: translate(0%, 0);
+        -webkit-transform: translate(0%, 0);
+      }
+    }
+  }
   .hero {
     display: flex;
     justify-content: center;

@@ -1,5 +1,6 @@
 .main-footer {
   padding-top: 55px;
+  box-shadow: inset 0px 6px 3px 0 rgb(0 0 0 / 36%);
   .logo-wrapper {
     max-width: 175px;
     display: block;
@@ -50,5 +51,36 @@
     line-height: 70px;
     text-align: center;
     font-weight: 100;
+  }
+}
+#to-top-btn {
+  display: none;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  background: $accent;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  @include borderRadius(50%);
+  cursor: pointer;
+  a {
+    i {
+      background: $accent;
+      position: absolute;
+      @include abs-center();
+      color: #fff;
+      @include borderRadius(50%);
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+    }
+  }
+  &:hover {
+    i {
+      background: #fff;
+      color: $accent;
+    }
   }
 }
