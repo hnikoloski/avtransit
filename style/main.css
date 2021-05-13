@@ -1446,6 +1446,119 @@ a:focus {
     max-width: 100%;
   }
 }
+.about-us-container {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  color: #fff;
+}
+.about-us-container .content {
+  margin-left: 20%;
+}
+.about-us-container .content h3 {
+  color: inherit;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 45px;
+  line-height: 1.6;
+}
+.about-us-container .content p {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.3;
+  max-width: 35ch;
+  position: relative;
+  z-index: 9999;
+}
+.about-us-container .img-col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  min-height: 350px;
+}
+.about-us-container .img-col::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+}
+.about-us-container .img-col::after {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: -1%;
+  width: 80px;
+  height: 102%;
+  z-index: 999;
+  background: #0a0a0a;
+  transform: rotate(5deg);
+}
+.about-us-container .img-col h4 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  z-index: 99;
+}
+
+@media (max-width: 1440px) {
+  .about-us-container .content {
+    margin-left: 15%;
+  }
+}
+@media (max-width: 1366px) {
+  .about-us-container .content {
+    margin-left: 5%;
+  }
+}
+@media (max-width: 1200px) {
+  .about-us-container .img-col::after {
+    transform: rotate(3deg);
+    left: -33px;
+    width: 66px;
+  }
+  .about-us-container .content {
+    margin-left: auto;
+  }
+}
+@media (max-width: 992px) {
+  .about-us-container {
+    padding-top: 75px;
+    padding-bottom: 0;
+  }
+  .about-us-container .content {
+    margin: 0 auto 35px auto;
+    text-align: center;
+  }
+  .about-us-container .content p {
+    max-width: 100%;
+  }
+  .about-us-container .img-col {
+    overflow-x: hidden;
+  }
+  .about-us-container .img-col::after {
+    top: -20px;
+    left: 0;
+    width: 105%;
+    height: 40px;
+    transform: rotate(2deg);
+  }
+}
+@media (max-width: 600px) {
+  .about-us-container .content h3 {
+    font-size: 35px;
+    line-height: 1.4;
+  }
+  .about-us-container .content p {
+    font-size: 20px;
+  }
+}
 body {
   background: #0a0a0a;
   padding: 0;

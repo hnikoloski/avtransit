@@ -8,9 +8,9 @@ $(window).scroll(function () {
     $("#masthead").removeClass("sticky");
   }
   if (scroll > 300) {
-    $("#to-top-btn").slideDown();
+    $("#to-top-btn").fadeIn();
   } else {
-    $("#to-top-btn").slideUp();
+    $("#to-top-btn").fadeOut();
   }
 });
 $(document).ready(function () {

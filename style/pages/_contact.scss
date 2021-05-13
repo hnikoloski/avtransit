@@ -26,6 +26,7 @@
           border-bottom: 2px solid $accent;
         }
       }
+
       &[type="submit"] {
         @include borderRadius(35px);
         padding: 10px;
