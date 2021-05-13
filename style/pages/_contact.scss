@@ -64,6 +64,13 @@
         border-bottom: 2px solid $accent;
       }
     }
+    .ajax-loader {
+      display: none !important;
+    }
+    .wpcf7-response-output {
+      color: #fff;
+      text-align: center;
+    }
   }
 }
 @media (max-width: 320px) {
