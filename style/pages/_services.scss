@@ -1,0 +1,51 @@
+#services-page {
+  .single-service {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    @include borderRadius(20px);
+    overflow: hidden;
+    .img-wrapper {
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .comming-soon {
+    font-size: 2rem;
+    text-align: center;
+    margin: 25px auto;
+    color: #fff;
+    font-weight: 700;
+  }
+  .cat-name {
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 25px auto;
+    color: #fff;
+    font-weight: 700;
+  }
+  .single-row {
+    position: relative;
+    padding-bottom: 100px;
+    &:last-of-type {
+      &::after {
+        display: none;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: $accent;
+      left: 0;
+      bottom: 50px;
+    }
+  }
+}

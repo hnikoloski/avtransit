@@ -26,6 +26,8 @@
             $terms = get_terms(array(
                 'taxonomy' => $taxonomy->name,
                 'hide_empty' => false,
+                'orderby'    => 'date',
+                'order'      => 'DSC',
             ));
 
             foreach ($terms as $term) {
@@ -34,7 +36,8 @@
                 $image = $image_data[0];
         ?>
                 <div class="col-lg-4 mb-4">
-                    <div class="single-service">
+
+                    <a href="/services" class="single-service d-block">
                         <div class="img-wrapper">
                             <?php
                             echo '<img src="' . esc_url($image) . '" />';
@@ -42,9 +45,9 @@
                         </div>
                         <div class="content">
                             <h3><?php echo $term->name; ?> </h3>
-                            <p><?php echo $term->description; ?></p>
+                            <!-- <p><?php echo $term->description; ?></p> -->
                         </div>
-                    </div>
+                    </a>
                 </div>
         <?php
             }
@@ -54,7 +57,7 @@
             <p>As a Trucking Company we provide more services. <br>
                 If you wish to learn more about it click on the button below!
             </p>
-            <a href="#" class="av-btn">See More</a>
+            <a href="/services" class="av-btn">See More</a>
         </div>
 
     </div>

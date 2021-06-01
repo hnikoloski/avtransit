@@ -20,7 +20,8 @@ $contentImg = get_field('content_image_about');
         </div>
         <div class="col-lg-6 img-col" style="background:url('<?php echo esc_url($contentImg['url']); ?>'); background-size:cover;
         background-position:center; background-repeat:no-repeat;">
-            <h4>asdasd</h4>
+            <h4>AV HOLDING ENTERPRISES LLC
+            </h4>
         </div>
     </div>
 </div>
